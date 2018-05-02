@@ -9,8 +9,7 @@ import javax.persistence.Id;
 public class Employee {
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", sSN=" + sSN
-				+ ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", city=" + city + ", state="
+		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", city=" + city + ", state="
 				+ state + ", country=" + country + ", zipCode=" + zipCode + ", phone=" + phone + ", companyId="
 				+ companyId + ", picture=" + picture + ", position=" + position + ", takenPicture=" + takenPicture
 				+ "]";
@@ -21,7 +20,6 @@ public class Employee {
 	private int id;
 	String firstName;
 	String lastName;
-	String sSN;
 	String addressLine1;
 	String addressLine2;
 	String city;
@@ -66,14 +64,6 @@ public class Employee {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-
-	public String getsSN() {
-		return sSN;
-	}
-
-	public void setsSN(String sSN) {
-		this.sSN = sSN;
 	}
 
 	public String getAddressLine1() {

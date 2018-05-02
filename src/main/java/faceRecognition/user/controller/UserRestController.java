@@ -220,7 +220,6 @@ public class UserRestController {
 			currentEmployee.setLastName(employee.getLastName());
 			currentEmployee.setPhone(employee.getPhone());
 			currentEmployee.setPosition(employee.getPosition());
-			currentEmployee.setsSN(employee.getsSN());
 			currentEmployee.setAddressLine1(employee.getAddressLine1());
 			currentEmployee.setAddressLine2(employee.getAddressLine2());
 			currentEmployee.setCity(employee.getCity());
