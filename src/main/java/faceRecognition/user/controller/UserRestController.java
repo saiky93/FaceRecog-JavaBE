@@ -558,7 +558,7 @@ public class UserRestController {
 	public ApiResponse getEmployeeUserEmailSpeech(@PathVariable int employeeId){
 		ApiResponse response = new ApiResponse();
 		
-		List<User> user = userService.getAllUsers();
+		User user = userService.findByEmployeeId(employeeId);
 		response.setResult(user);
 		return response;
 	}
