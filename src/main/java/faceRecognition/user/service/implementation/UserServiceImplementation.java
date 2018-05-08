@@ -76,4 +76,10 @@ public class UserServiceImplementation implements UserService {
 		userRepository.delete(user.getId());
 	}
 
+	@Override
+	public List<User> getByEmployeeId(int employeeid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

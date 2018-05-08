@@ -553,4 +553,14 @@ public class UserRestController {
 		}
 		return response;
 	}
+	
+	@RequestMapping(value = "/employee/{employeeId}", method = RequestMethod.GET)
+	public ApiResponse getEmployeeUserEmailSpeech(@PathVariable int employeeId){
+		ApiResponse response = new ApiResponse();
+		
+		List<User> user = userService.getAllUsers();
+		response.setResult(user);
+		return response;
+	}
+	
 }

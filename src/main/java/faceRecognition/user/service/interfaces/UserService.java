@@ -23,4 +23,6 @@ public interface UserService {
 	String getPassword(CompanyRegister companyWrapper);
 
 	void deleteUser(int id);
+
+	List<User> getByEmployeeId(int employeeid);
 }
