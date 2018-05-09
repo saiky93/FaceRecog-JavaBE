@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import faceRecognition.company.domain.Company;
 import faceRecognition.company.service.interfaces.CompanyService;
+import faceRecognition.emails.EmailService;
 import faceRecognition.employee.domain.Employee;
 import faceRecognition.employee.service.interfaces.EmployeeService;
 import faceRecognition.user.domain.ApiResponse;
@@ -46,6 +47,9 @@ public class UserRestController {
 	@Autowired
 	private UserService userService;
 
+	@Autowired
+	private EmailService emailService;
+	
 	@Autowired
 	private EmployeeService employeeService;
 
@@ -559,6 +563,7 @@ public class UserRestController {
 		ApiResponse response = new ApiResponse();
 		
 		User user = userService.findByEmployeeId(employeeId);
+		emailService.sendMail(user.getEmail(), "Receptionist Alert", "Someone is waiting for you at the front-desk.");
 		response.setResult(user);
 		return response;
 	}
